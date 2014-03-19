@@ -1,6 +1,6 @@
 ﻿Shader "MyShaders/1 - FlatColor" {
 	Properties {
-		_Color ("Choose Color", Color) = (1.0,1.0,1.0,1.0)
+		_Color ("Main Color", Color) = (1.0,1.0,1.0,1.0)
 	}
 	
 	SubShader {

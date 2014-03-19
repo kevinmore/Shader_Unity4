@@ -1,6 +1,7 @@
 ﻿Shader "MyShaders/2 - Lambert" {
 	Properties {
-		_Color ("Choose Color", Color) = (1.0,1.0,1.0,1.0)
+		_Color ("Main Color", Color) = (1.0,1.0,1.0,1.0)
+		_Atte ("Attenuation", Range(0.01, 1.0)) = 1.0
 	}
 	SubShader {
 		Pass {
@@ -12,6 +13,7 @@
 			
 			// user difined variables
 			uniform float4 _Color;
+			uniform float _Atte;
 			
 			// Unity defined variables
 			uniform float4 _LightColor0;
@@ -28,10 +30,10 @@
 			// vertex function
 			vertexOutput vert(vertexInput v){
 				vertexOutput o;
-				float attenuation = 1.0;
+				
 				float3 normalDirection = normalize(mul(float4(v.normal, 0.0), _World2Object).xyz);
 				float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
-				float3 diffuseReflection = attenuation * _LightColor0.xyz * _Color.rgb * max(0.0, dot(normalDirection, lightDirection));
+				float3 diffuseReflection = _Atte * _LightColor0.xyz * _Color.rgb * max(0.0, dot(normalDirection, lightDirection));
 				
 				
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
