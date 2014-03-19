@@ -2,7 +2,7 @@
 	Properties {
 		_Color ("Main Color", Color) = (1.0,1.0,1.0,1.0)
 		_SpecColor ("Specular Color", Color) = (1.0,1.0,1.0,1.0)
-		_Shininess ("Shininess", Range (0.01, 20)) = 10
+		_Shininess ("Shininess", Range (0.01, 20)) = 5
 		_Atte ("Attenuation", Range(0.01, 1.0)) = 1.0
 	}
 	SubShader {
@@ -40,7 +40,7 @@
 				float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
 				
 				float3 diffuseReflection = _Atte * _LightColor0.xyz * max(0.0, dot(normalDirection, lightDirection));
-				float3 specularReflection = _Atte * _LightColor0.xyz * _SpecColor.rgb * max(0.0, dot(normalDirection, lightDirection)) * pow(max(0.0, dot(reflect(-lightDirection, normalDirection), viewDirection)), _Shininess);
+				float3 specularReflection = diffuseReflection * _SpecColor.rgb * pow(saturate(dot(reflect(-lightDirection, normalDirection), viewDirection)), _Shininess);
 				
 				float3 lightFinal = diffuseReflection + specularReflection + UNITY_LIGHTMODEL_AMBIENT.xyz;
 				

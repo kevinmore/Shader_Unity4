@@ -1,12 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\3\3_SpecularPixel.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CameralMove.cs">
     <Files>
-      <File FileName="Assets\3\3_Specular.shader" Line="37" Column="5" />
-      <File FileName="Assets\2_Lambert&amp;Ambient\2_Lambert.shader" Line="1" Column="1" />
-      <File FileName="Assets\2_Lambert&amp;Ambient\2_Ambient.shader" Line="1" Column="1" />
-      <File FileName="Assets\1_FlatColor\1_FlatColor.shader" Line="3" Column="16" />
-      <File FileName="Assets\3\3_SpecularPixel.shader" Line="41" Column="6" />
+      <File FileName="Assets\6_Texture\6_Texture.shader" Line="107" Column="4" />
+      <File FileName="Assets\7_NormalMap\7_NormalMap.shader" Line="1" Column="1" />
+      <File FileName="Assets\8_GlossMap\8_GlossMap.shader" Line="1" Column="1" />
+      <File FileName="Assets\8_GlossMap\8_EmitlMap.shader" Line="1" Column="1" />
+      <File FileName="Assets\CameralMove.cs" Line="5" Column="36" />
+      <File FileName="Assets\DirectionalLightControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\ObjectLabel.cs" Line="46" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
