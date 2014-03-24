@@ -1,6 +1,6 @@
 Shader_Unity4
 =============
-![alt text]( "Screenshot")
+![alt text](https://github.com/kevinmore/Shader_Unity4/blob/master/Screen_Shot.png?raw=true "Screenshot")
 
 Web Build: <a href="https://dl.dropboxusercontent.com/u/147666796/UnityPorjects/ShaderPractice/Shaders.html">Click Here</a>
 
